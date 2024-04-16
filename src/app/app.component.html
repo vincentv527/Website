@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<header style="background-color: RGB(223, 207, 190);">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white; padding-left: 20px; padding-right: 20px; font-size: larger;">
+    <a class="navbar-brand" routerLink="home" style="font-size: 25px;">Vincent Vitiello</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home">Home |</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link" routerLink="resume">Resume |</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link" routerLink="projects">Projects |</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link" routerLink="aboutme">About Me</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+
+<div>
+  <div id="container" [ngStyle]="{ backgroundImage: 'url(assets/images/18410.jpg)'}" style="margin: 0; width: 99vw; height: 95vh;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-auto" style="padding-top: 300px;">
+          <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+            <li>
+                <a href="https://www.linkedin.com/in/vincentvitiello1/" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                  <i class="bi bi-linkedin fs-1"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/vincentv527" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                  <i class="bi bi-github fs-1"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                  <i class="bi bi-mailbox-flag fs-1"></i>
+                </a>
+            </li>
+        </ul>
+        </div>
+        <div class="col-sm p-3">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+</html>
