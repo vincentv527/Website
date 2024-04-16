@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white; padding-left: 20px; padding-right: 20px; font-size: larger;">
-    <a class="navbar-brand" routerLink="home" style="font-size: 25px;">Vincent Vitiello</a>
+    <img class="logo" style="display: inline-block; width: 50px; height: 50px;" src="assets\images\logo2.png">
+    <a class="navbar-brand" routerLink="home" style="font-size: 25px; padding-left: 10px;">Vincent Vitiello</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,17 +38,17 @@
         <div class="col-sm-auto" style="padding-top: 300px;">
           <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
             <li>
-                <a href="https://www.linkedin.com/in/vincentvitiello1/" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                <a href="https://www.linkedin.com/in/vincentvitiello1/" class="nav-link py-3 px-2" style="color: #00a8e8;">
                   <i class="bi bi-linkedin fs-1"></i>
                 </a>
             </li>
             <li>
-                <a href="https://github.com/vincentv527" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                <a href="https://github.com/vincentv527" class="nav-link py-3 px-2" style="color: #00a8e8;">
                   <i class="bi bi-github fs-1"></i>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                <a class="nav-link py-3 px-2" title="" style="color: #00a8e8;" [ngbPopover]="popContent" [popoverTitle]="popTitle" [popoverClass]="">
                   <i class="bi bi-mailbox-flag fs-1"></i>
                 </a>
             </li>
@@ -65,3 +66,8 @@
 
 
 </html>
+<ng-template #popTitle style="width: 200px;">Personal Information</ng-template>
+<ng-template #popContent style="word-break: keep-all;">
+  <b>Email: </b>Vincent.vitiello527&#64;Gmail.com<br>
+  <b>Resume: </b><br><a download="Vincent Vitiello's Resume.pdf" target="_blank" href="assets\files\Vincent Vitiello Resume.pdf">Vincent Vitiello's Resume</a><br>
+</ng-template>
