@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 import { NgApexchartsModule } from "ng-apexcharts";
+import {MatRippleModule} from '@angular/material/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     AppRoutingModule,
     NgbModule,
     NgApexchartsModule,
+    MatRippleModule,
     NgxBootstrapIconsModule.pick(allIcons),
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -34,7 +37,9 @@ import { NgApexchartsModule } from "ng-apexcharts";
       {path:'aboutme', component: AboutMeComponent},
     ])
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

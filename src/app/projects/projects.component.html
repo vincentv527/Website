@@ -1,2 +1,9 @@
-<h1 style="text-align: center;">COMING SOON</h1>
-
+<div class="row">
+    <div class="col-3" *ngFor="let project of projects"
+        style="padding-top: 20px; padding-bottom: 20px; padding-left: 100px;">
+        <div class="example-ripple-container mat-elevation-z4" style="background-color: #dee2e6;" (click)="openUrl(project.url)" matRipple [matRippleCentered]="centered" [matRippleDisabled]="disabled" [matRippleUnbounded]="unbounded" [matRippleRadius]="radius" [matRippleColor]="color">
+            <img src="{{ project.img }}" class="border border-4" width="100%"><br>
+            <p style="text-align: center; background-color: #dee2e6;">{{ project.description }}</p>
+        </div>
+    </div>
+</div>
